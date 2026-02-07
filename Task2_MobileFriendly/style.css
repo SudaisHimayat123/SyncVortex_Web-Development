@@ -1,0 +1,575 @@
+/* ===========================
+   CSS RESET & BOX SIZING
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   ROOT VARIABLES
+   =========================== */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-text: #666;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --border-color: #ddd;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --max-width: 1200px;
+}
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-small);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-medium);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: var(--spacing-small);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+}
+
+p {
+    margin-bottom: var(--spacing-medium);
+    color: var(--text-color);
+}
+
+strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ===========================
+   HEADER SECTION
+   =========================== */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-large) var(--spacing-medium);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: white;
+    margin-bottom: var(--spacing-small);
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+nav {
+    background-color: var(--card-background);
+    padding: var(--spacing-medium);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h2 {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-small);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   MAIN CONTAINER
+   =========================== */
+main {
+    max-width: var(--max-width);
+    margin: var(--spacing-large) auto;
+    padding: 0 var(--spacing-medium);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+}
+
+/* ===========================
+   SECTION STYLING
+   =========================== */
+section {
+    background-color: var(--card-background);
+    padding: var(--spacing-large);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-medium);
+}
+
+hr {
+    display: none;
+}
+
+/* ===========================
+   ARTICLE STYLING (EXPERIENCE)
+   =========================== */
+article {
+    margin-bottom: var(--spacing-large);
+    padding: var(--spacing-medium);
+    border-left: 4px solid var(--secondary-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+article p {
+    margin-bottom: var(--spacing-small);
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================
+   SKILLS SECTION
+   =========================== */
+#skills p {
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    margin-bottom: var(--spacing-small);
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* ===========================
+   PROJECTS SECTION
+   =========================== */
+#projects p {
+    padding: var(--spacing-medium);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    margin-bottom: var(--spacing-medium);
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects p:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   TABLE STYLING
+   =========================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-medium);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    display: block;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th {
+    padding: var(--spacing-medium);
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: var(--spacing-medium);
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr {
+    background-color: var(--card-background);
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: var(--background-color);
+}
+
+/* ===========================
+   FORM STYLING
+   =========================== */
+form {
+    margin-top: var(--spacing-medium);
+}
+
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: var(--spacing-large);
+    background-color: var(--background-color);
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 var(--spacing-small);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: var(--spacing-small);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    padding: var(--spacing-small) var(--spacing-large);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-right: var(--spacing-small);
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button[type="reset"] {
+    background-color: var(--light-text);
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #555;
+}
+
+/* ===========================
+   ADDRESS/CONTACT INFO
+   =========================== */
+address {
+    font-style: normal;
+    line-height: 2;
+    padding: var(--spacing-medium);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    margin-top: var(--spacing-medium);
+}
+
+address a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+address a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-large) var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
+
+footer p {
+    margin-bottom: var(--spacing-small);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN - TABLET
+   =========================== */
+@media screen and (max-width: 768px) {
+    /* Typography adjustments */
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Navigation - Stack vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    /* Main content padding */
+    main {
+        padding: 0 var(--spacing-small);
+        margin: var(--spacing-medium) auto;
+    }
+
+    /* Section padding */
+    section {
+        padding: var(--spacing-medium);
+    }
+
+    /* Article padding */
+    article {
+        padding: var(--spacing-small);
+    }
+
+    /* Form adjustments */
+    fieldset {
+        padding: var(--spacing-medium);
+    }
+
+    /* Table - Make scrollable */
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: var(--spacing-small);
+    }
+
+    /* Buttons - Stack on mobile */
+    button {
+        width: 100%;
+        margin-bottom: var(--spacing-small);
+    }
+
+    button[type="submit"] {
+        margin-right: 0;
+    }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN - MOBILE
+   =========================== */
+@media screen and (max-width: 480px) {
+    /* Even smaller typography */
+    html {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Tighter spacing */
+    :root {
+        --spacing-small: 0.4rem;
+        --spacing-medium: 0.8rem;
+        --spacing-large: 1.5rem;
+    }
+
+    /* Header */
+    header {
+        padding: var(--spacing-medium);
+    }
+
+    /* Navigation */
+    nav {
+        padding: var(--spacing-small);
+    }
+
+    nav a {
+        padding: var(--spacing-small);
+        font-size: 0.95rem;
+    }
+
+    /* Table - Show minimal info */
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.4rem;
+    }
+
+    /* Hide less critical table columns on very small screens */
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        display: none;
+    }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN - DESKTOP
+   =========================== */
+@media screen and (min-width: 769px) {
+    /* Larger spacing for desktop */
+    :root {
+        --spacing-large: 3rem;
+    }
+
+    /* Experience section - Use grid layout */
+    #experience {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+    }
+
+    /* Skills can use grid on larger screens */
+    #skills {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-small);
+    }
+
+    /* Form - Two column layout for contact form */
+    form p {
+        margin-bottom: var(--spacing-medium);
+    }
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+    nav, footer {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+}
