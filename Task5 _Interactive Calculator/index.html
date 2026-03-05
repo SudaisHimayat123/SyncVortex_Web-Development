@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Calculator</title>
+
+    <!-- Google Fonts: Syne (headings) + DM Mono (numbers) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ── Main wrapper ─────────────────────────────── -->
+    <main class="page-wrapper">
+
+      <!-- ── Calculator card ──────────────────────── -->
+      <div class="card" id="calculatorCard">
+
+        <!-- Heading -->
+        <h1 class="card__title">Interactive<br /><span>Calculator</span></h1>
+        <p class="card__subtitle">Week 5 · JavaScript Fundamentals</p>
+
+        <!-- ── Input row ─────────────────────────── -->
+        <div class="input-row">
+          <!-- Number A -->
+          <div class="field">
+            <label class="field__label" for="numA">Number A</label>
+            <input
+              class="field__input"
+              type="number"
+              id="numA"
+              placeholder="e.g. 12"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Operator badge (updated dynamically) -->
+          <div class="operator-badge" id="operatorBadge">?</div>
+
+          <!-- Number B -->
+          <div class="field">
+            <label class="field__label" for="numB">Number B</label>
+            <input
+              class="field__input"
+              type="number"
+              id="numB"
+              placeholder="e.g. 4"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <!-- ── Operation buttons ─────────────────── -->
+        <div class="btn-grid">
+          <button class="op-btn" id="btnAdd"      data-op="add"      >＋ Add</button>
+          <button class="op-btn" id="btnSubtract" data-op="subtract" >－ Subtract</button>
+          <button class="op-btn" id="btnMultiply" data-op="multiply" >✕ Multiply</button>
+          <button class="op-btn" id="btnDivide"   data-op="divide"   >÷ Divide</button>
+        </div>
+
+        <!-- ── Result display ────────────────────── -->
+        <div class="result-box" id="resultBox">
+          <!-- Result text is updated by JS -->
+          <p class="result-box__label">Result</p>
+          <p class="result-box__value" id="resultValue">—</p>
+          <p class="result-box__equation" id="resultEquation"></p>
+        </div>
+
+        <!-- Error message (hidden by default) -->
+        <p class="error-msg" id="errorMsg" role="alert"></p>
+
+        <!-- ── Reset button ───────────────────────── -->
+        <button class="reset-btn" id="btnReset">↺ Reset</button>
+
+      </div><!-- /.card -->
+
+      <!-- ── Concept tags (decorative / academic) ─ -->
+      <div class="tags">
+        <span class="tag">Variables</span>
+        <span class="tag">Data Types</span>
+        <span class="tag">Functions</span>
+        <span class="tag">DOM Selection</span>
+        <span class="tag">DOM Manipulation</span>
+        <span class="tag">Event Listeners</span>
+        <span class="tag">Conditionals</span>
+      </div>
+
+    </main><!-- /.page-wrapper -->
+
+    <!-- External script (defer = runs after HTML is parsed) -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
